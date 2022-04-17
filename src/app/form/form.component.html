@@ -1,0 +1,9 @@
+<p>form works!</p>
+<form [formGroup]="formQuery" (ngSubmit)="onSubmit()">
+  <label>
+    type query:
+    <input type="text" formControlName="query" [(ngModel)]="title" />
+  </label>
+  <p>{{title}}</p>
+  <button type="submit">search</button>
+</form>
