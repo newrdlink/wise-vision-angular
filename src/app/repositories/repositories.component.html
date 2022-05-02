@@ -1,3 +1,17 @@
-<section [ngClass]="{}">
-  repositories works!
+<section [class.repositories]="{}" [ngSwitch]="arrayRepositories.length > 0">
+
+
+
+  <section *ngSwitchCase="true">
+    <div *ngFor="let repository of arrayRepositories">
+      <p>{{arrayRepositories.length}}</p>
+      <p>{{repository.owner.login}}</p>
+      <img src="{{repository.owner.avatar_url}}" />
+    </div>
+  </section>
+
+  <p *ngSwitchCase="!isResult">{{noResult}}</p>
+
+  <p [class.repositories__empty]="{}" *ngSwitchDefault>insert query</p>
+
 </section>

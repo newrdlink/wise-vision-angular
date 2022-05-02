@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core'
-import { Repositories } from './services/repositories.service'
+import { Component } from '@angular/core'
 
 @Component({
   selector: 'app-root',
@@ -7,15 +6,6 @@ import { Repositories } from './services/repositories.service'
   styleUrls: ['./app.component.scss']
 })
 
-export class AppComponent implements OnInit {
-  appTitle = 'wise-vision'
-  arrayRepositories: any[] = []
+export class AppComponent {
 
-  constructor(
-    public readonly list: Repositories
-  ) { }
-
-  ngOnInit(): void {
-    this.list.repositories$.subscribe((items: any) => this.arrayRepositories = items)
-  }
 }
