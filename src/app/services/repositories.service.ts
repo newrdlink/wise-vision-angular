@@ -9,7 +9,7 @@ export class Repositories {
 
   public repositories$ = new Subject
 
-  public setRepositories(arr: any[]) {
+  public setRepositories(arr: any[]): void {
     this.repositories$.next(arr)
   }
 }
